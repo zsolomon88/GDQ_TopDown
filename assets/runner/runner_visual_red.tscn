@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://bm8s1oaoxngwq"]
+
+[ext_resource type="PackedScene" uid="uid://hjn4sr1lgmmx" path="res://assets/runner/runner_visual_purple.tscn" id="1_i8e4b"]
+[ext_resource type="Texture2D" uid="uid://pgwdkcat1x2m" path="res://assets/runner/red_parts/foot.png" id="2_pbjpl"]
+[ext_resource type="Texture2D" uid="uid://cc28lc47urejl" path="res://assets/runner/red_parts/body.png" id="3_c2s05"]
+[ext_resource type="Texture2D" uid="uid://c4ftdxyamufn" path="res://assets/runner/red_parts/head.png" id="4_jlvl7"]
+[ext_resource type="Texture2D" uid="uid://dkbvndnmsqdem" path="res://assets/runner/red_parts/face.png" id="6_vqybe"]
+[ext_resource type="Texture2D" uid="uid://bqic37e4ko357" path="res://assets/runner/red_parts/red_face_back.png" id="7_gwbl7"]
+[ext_resource type="Texture2D" uid="uid://dyajtqt6p6af2" path="res://assets/runner/red_parts/ear.png" id="8_0e8o4"]
+[ext_resource type="Texture2D" uid="uid://dyqynsxl8many" path="res://assets/runner/red_parts/antenna.png" id="9_wrnpm"]
+[ext_resource type="Texture2D" uid="uid://dkgxdq5fb0tob" path="res://assets/runner/red_parts/hand.png" id="10_e8mf4"]
+
+[node name="RunnerVisualRed" unique_id=954840576 instance=ExtResource("1_i8e4b")]
+
+[node name="FootL" parent="Visual" parent_id_path=PackedInt32Array(1063291511) index="0" unique_id=1708975822]
+scale = Vector2(0.999957, 0.999957)
+skew = -5.1379204e-05
+
+[node name="FootSprite" parent="Visual/FootL" index="0" unique_id=1392856473]
+texture = ExtResource("2_pbjpl")
+
+[node name="FootR" parent="Visual" parent_id_path=PackedInt32Array(1063291511) index="1" unique_id=1060817573]
+scale = Vector2(0.999905, 0.999907)
+skew = -4.87566e-05
+
+[node name="FootSprite" parent="Visual/FootR" index="0" unique_id=1495789428]
+texture = ExtResource("2_pbjpl")
+
+[node name="ArmR" parent="Visual" parent_id_path=PackedInt32Array(1063291511) index="2" unique_id=1825455550]
+self_modulate = Color(0.839277, 0.317525, 0.152895, 1)
+points = PackedVector2Array(16, -71.5275, 48, -45.5275)
+
+[node name="ArmL" parent="Visual" parent_id_path=PackedInt32Array(1063291511) index="3" unique_id=1429014598]
+self_modulate = Color(0.839277, 0.317525, 0.152895, 1)
+points = PackedVector2Array(-16, -71.5275, -48, -45.5275)
+
+[node name="LegR" parent="Visual" parent_id_path=PackedInt32Array(1063291511) index="4" unique_id=899789692]
+self_modulate = Color(0.839277, 0.317525, 0.152895, 1)
+points = PackedVector2Array(16, -37.5275, 16, -23)
+
+[node name="LegL" parent="Visual" parent_id_path=PackedInt32Array(1063291511) index="5" unique_id=518641504]
+self_modulate = Color(0.839277, 0.317525, 0.152895, 1)
+points = PackedVector2Array(-16, -37.5275, -16, -23)
+
+[node name="Body" parent="Visual" parent_id_path=PackedInt32Array(1063291511) index="6" unique_id=68547316]
+position = Vector2(0, -53.3659)
+texture = ExtResource("3_c2s05")
+
+[node name="HeadShape" parent="Visual" parent_id_path=PackedInt32Array(1063291511) index="7" unique_id=272739351]
+position = Vector2(0, -143.105)
+texture = ExtResource("4_jlvl7")
+
+[node name="Face" parent="Visual/HeadShape" index="0" unique_id=2114946614]
+texture = ExtResource("6_vqybe")
+
+[node name="Back" parent="Visual/HeadShape" index="1" unique_id=84915103]
+position = Vector2(192, 0)
+texture = ExtResource("7_gwbl7")
+
+[node name="EarR" parent="Visual" parent_id_path=PackedInt32Array(1063291511) index="8" unique_id=147253036]
+position = Vector2(82, -132.442)
+texture = ExtResource("8_0e8o4")
+
+[node name="AntennaR" parent="Visual/EarR" index="0" unique_id=1885468577]
+texture = ExtResource("9_wrnpm")
+
+[node name="EarL" parent="Visual" parent_id_path=PackedInt32Array(1063291511) index="9" unique_id=21437061]
+position = Vector2(-82, -132.442)
+texture = ExtResource("8_0e8o4")
+
+[node name="AntennaL" parent="Visual/EarL" index="0" unique_id=1220895600]
+texture = ExtResource("9_wrnpm")
+
+[node name="HandR" parent="Visual" parent_id_path=PackedInt32Array(1063291511) index="10" unique_id=572425725]
+position = Vector2(48, -45.3659)
+texture = ExtResource("10_e8mf4")
+
+[node name="HandL" parent="Visual" parent_id_path=PackedInt32Array(1063291511) index="11" unique_id=179188869]
+position = Vector2(-48, -45.3659)
+texture = ExtResource("10_e8mf4")
