@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cvhhkow1mb2b5"]
+
+[ext_resource type="Texture2D" uid="uid://tgs14f485wph" path="res://assets/kenney-particles/smoke_04.png" id="1_bmsb4"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_sqcc4"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_wrb84"]
+_data = [Vector2(0, 0.57462686), 0.0, 0.0, 0, 0, Vector2(0.14051841, 0.67014927), 0.81350946, 0.81350946, 0, 0, Vector2(0.24010913, 0.8014926), 1.5258839, 1.5258839, 0, 0, Vector2(0.5675307, 0.99701494), 0.0, 0.0, 0, 0, Vector2(0.85811734, 0.6716418), -2.5006387, -2.5006387, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 6
+
+[sub_resource type="CurveTexture" id="CurveTexture_1nes5"]
+curve = SubResource("Curve_wrb84")
+
+[sub_resource type="Gradient" id="Gradient_bn04v"]
+colors = PackedColorArray(0.9246604, 0.42774847, 0.08105043, 1, 0.5679536, 0.17590657, 4.813075e-08, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dhdaa"]
+gradient = SubResource("Gradient_bn04v")
+
+[sub_resource type="Curve" id="Curve_lcykd"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.09004092, 0.56268656), 5.2566795, 5.2566795, 0, 0, Vector2(0.22919507, 1), 0.0, 0.0, 0, 0, Vector2(0.80218285, 0.03134322), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_wib00"]
+curve = SubResource("Curve_lcykd")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bqb8x"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 10.0
+angle_min = -179.99998
+angle_max = 180.00002
+direction = Vector3(0, -1, 0)
+spread = 0.0
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.19999999
+scale_max = 0.19999999
+scale_curve = SubResource("CurveTexture_wib00")
+color_ramp = SubResource("GradientTexture1D_dhdaa")
+alpha_curve = SubResource("CurveTexture_1nes5")
+
+[node name="TestParticle" type="Node2D" unique_id=1284008057]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=542210091]
+material = SubResource("CanvasItemMaterial_sqcc4")
+amount = 30
+texture = ExtResource("1_bmsb4")
+lifetime = 3.0
+process_material = SubResource("ParticleProcessMaterial_bqb8x")
