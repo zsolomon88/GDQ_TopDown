@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://5vl7p0xb7nd8" path="res://assets/circuit_background.png" id="1_gkp25"]
 [ext_resource type="PackedScene" uid="uid://p75euy1gcr34" path="res://lessons/runner.tscn" id="1_yasw7"]
 [ext_resource type="PackedScene" uid="uid://l5vkm11cgaib" path="res://lessons/simple_obstacle.tscn" id="2_4o7yg"]
+[ext_resource type="PackedScene" uid="uid://budpgxkjtmw1f" path="res://lessons/bouncer.tscn" id="4_jtw2t"]
 [ext_resource type="PackedScene" uid="uid://ctfrkukdhiywq" path="res://lessons/circuit.tscn" id="4_sepuf"]
 [ext_resource type="PackedScene" uid="uid://xl56q8amb611" path="res://assets/finish_line/finish_line.tscn" id="5_sepuf"]
 [ext_resource type="Theme" uid="uid://cdcyvsn1fp8wa" path="res://assets/countdown/count_down_theme.tres" id="7_viysf"]
@@ -60,6 +61,10 @@ metadata/_edit_lock_ = true
 unique_name_in_owner = true
 position = Vector2(-896, 800)
 
+[node name="Bouncer" parent="." unique_id=2050822513 instance=ExtResource("4_jtw2t")]
+unique_name_in_owner = true
+position = Vector2(-1264, 560)
+
 [node name="SimpleObstacle" parent="." unique_id=1916364652 instance=ExtResource("2_4o7yg")]
 position = Vector2(384, 256)
 
@@ -115,7 +120,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_olcrl")
 script = ExtResource("11_okwwg")
-animation_duration = null
 
 [node name="BlurColorRect" type="ColorRect" parent="CanvasLayer/PauseScreen" unique_id=1498665639]
 unique_name_in_owner = true
@@ -169,3 +173,8 @@ text = "Resume"
 unique_name_in_owner = true
 layout_mode = 2
 text = "Quit"
+
+[node name="EnemyTimer" type="Timer" parent="." unique_id=1604575561]
+unique_name_in_owner = true
+wait_time = 0.5
+one_shot = true
